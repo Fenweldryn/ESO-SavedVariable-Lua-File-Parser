@@ -13,7 +13,7 @@ if ($file[strlen($file) - 1] == ",") {
 $file = "{" . $file . "}";
 $file = preg_replace('/\{(\w+)/', "{\"$1\"", $file);
 $file = preg_replace('/\}(\w+)/', "},\"$1\"", $file);
-echo '<pre>';
 
 $array = json_decode($file, true);
+echo '<pre>';
 print_r($array);
